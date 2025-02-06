@@ -1,0 +1,674 @@
+Q1 display your name and age entered by the user.
+
+fun main() {
+ println("Enter your name")
+ val name = readLine()
+ println("Enter your age")
+ var age: Int =Integer.valueOf(readLine())
+ println("Your name is $name and your age is $age")
+}
+____________________________________________________________
+
+Q2  display a welcome message to the user.
+
+fun main(){
+    println("Enter your name")
+    val name=readLine()
+    println("Welcome , $name")
+}
+____________________________________________________________
+
+Q3  store your enrollment number, name & course in different
+variables and display on the screen.
+
+fun main() {
+    println("Enter a enrollment number")
+    var no: Int = Integer.valueOf(readLine())
+    println("Enter a student name")
+    val name = readLine()
+    println("Enter Course Name")
+    val course= readLine()
+    println("Enrollment Number is $no")
+    println("Name is $name")
+    println("Course name is $course")
+}
+
+____________________________________________________________
+
+Q4 accept enrollment number, student name and marks of 5
+subjects, from the user. Calculate the Total and Percentage and display all the details 
+
+fun main(){
+    println("Enter a enrollment number")
+    var no:Int=Integer.valueOf(readLine())
+    println("Enter a student name")
+    val name= readLine()
+    println("Mark in Android")
+    var m1:Int=Integer.valueOf(readLine())
+    println("Mark in Java")
+    var m2:Int=Integer.valueOf(readLine())
+    println("Mark in Python")
+    var m3:Int=Integer.valueOf(readLine())
+    println("Mark in Data Science")
+    var m4:Int=Integer.valueOf(readLine())
+    println("Mark in Cyber Security")
+    var m5:Int=Integer.valueOf(readLine())
+    var total=m1+m2+m3+m4+m5
+    var per=(total.toDouble()/500)*100
+    println("Enrollment no is $no")
+    println("Student Name is $name")
+    println("Total is $total")
+    println("Percentage is $per")
+}
+
+____________________________________________________________
+
+Q5 arithmetic operation on 2 numbers accepted from the user
+
+fun main(){
+    println("Enter Number 1 ")
+    var a:Int=Integer.valueOf(readLine())
+    println("Enter Number 2 ")
+    var b:Int=Integer.valueOf(readLine())
+    var add=a+b
+    var sub=a-b
+    var mul=a*b
+    var div=a/b
+    println("Number of Addition is $add")
+    println("Number of Subtraction is $sub")
+    println("Number of Multiplication is $mul")
+    println("Number of Divided is $div")
+}
+____________________________________________________________
+
+Q6 calculate and display the Simple Interest
+
+fun main(){
+    println("Enter a Principle")
+    var p:Int=Integer.valueOf(readLine())
+    println("Enter a Rate")
+    var r:Int=Integer.valueOf(readLine())
+    println("Enter a Year")
+    var n:Int=Integer.valueOf(readLine())
+    var total=(p*r*n)/100
+    println("Simple Interest is $total")
+}
+____________________________________________________________
+
+
+Q7 print the multiplication table of a number
+
+fun main(){
+    println("Enter a number")
+    var n:Int=Integer.valueOf(readLine())
+    for(i in 1..10){
+        var mul=n*i
+        println("$n * $i = $mul")
+    }
+}
+____________________________________________________________
+
+Q8 calculate the area of a cylinder. Accept the radius and height
+from the user. Area: πr2h.
+
+fun main(){
+    println("Enter Radius")
+    var r:Int=Integer.valueOf(readLine())
+    println("Enter Height")
+    var h:Int=Integer.valueOf(readLine())
+    var area=3.14*r*r*h
+    println("Area of a cylinder is $area")
+}
+
+____________________________________________________________
+
+Q9 mutable and immutable variables in a program.
+
+fun main() {
+    val name = "Alice"
+    println("Name: $name")
+    var age = 25
+    println("Age: $age")
+    age = 26
+    println("Updated Age: $age")
+}
+____________________________________________________________
+
+Q10 even and odd numbers between a given range. Accept the range values from the user.
+
+fun main(){
+    println("Enter a number")
+    var a:Int=Integer.valueOf(readLine())
+    if(a%2==0){
+        println("$a number is even")
+    }
+    else{
+        println("$a number is odd")
+    }
+}
+
+____________________________________________________________
+
+Q11 check whether the number is positive, negative or zero.
+
+fun main(){
+    println("Enter a number")
+    var a:Int=Integer.valueOf(readLine())
+    if(a!=null){
+        if(a>0){
+            println("$a is positive number")
+        }
+        else if(a<0){
+            println("$a is negative number")
+        }
+        else{
+            println("$a is zero ")
+        }
+    }
+}
+
+____________________________________________________________
+
+Q12 simple calculator for +, - , *, /, %, using when.
+
+fun main(){
+    println("Enter number1")
+    var a:Int=Integer.valueOf(readLine())
+    println("Enter number2")
+    var b:Int=Integer.valueOf(readLine())
+    println("Operation are +,-,*,/,%")
+    var operation= readLine()
+    val result = when(operation){
+        "+"->a+b
+        "-"->a-b
+        "*"->a*b
+        "/"->a/b
+        "%"->(a/b)*100
+        else->"$operation is invalid"
+    }
+    println("Result is : $result")
+}
+____________________________________________________________
+
+Q13  swap 2 values accepted from the user without using a third variable.
+
+fun main(){
+    println("Enter Number1")
+    var a:Int=Integer.valueOf(readLine())
+    println("Enter Number2")
+    var b:Int=Integer.valueOf(readLine())
+    println("Swapping 2 numbers without 3 variable")
+    println("Before Swapping $a,$b")
+    a=a+b
+    b=a-b
+    a=a-b
+    println("After swapping $a,$b")
+}
+____________________________________________________________
+
+Q14 sum of digits of a number accepted from the user.
+
+fun main(){
+    println("Enter a Digit")
+    var a:Int=Integer.valueOf(readLine())
+    var sum=0
+    var n=a
+    while(n!=0){
+        var digit=n%10
+        sum += digit
+        n/=10
+    }
+    println("Sum of digit $a is $sum")
+}
+____________________________________________________________
+
+Q15 accept 3 numbers from the user and print the biggest & smallest of the 3 float values.
+
+import java.util.Scanner
+fun main(args:Array<String>){
+    val sc=Scanner(System.`in`)
+    println("Enter 1st number:")
+    var a=sc.nextFloat()
+    println("Enter 2nd number:")
+    var b=sc.nextFloat()
+    println("Enter 3rd number:")
+    var c=sc.nextFloat()
+    if(a>b && a>c){
+        println("$a is greater")
+    }
+    else if(b>a && b>c){
+        println("$b is greater")
+    }
+    else{
+        println("$c is greater")
+    }
+}
+____________________________________________________________
+
+Q16 vowels in it and display it to the user. (a, e, i, o, u ) 
+
+import java.util.*
+fun main(){
+    var read=Scanner(System.`in`)
+    println("Enter a string")
+    val a=Scanner(System.`in`)
+    var line = read.next()
+    var vowel=0
+    line = line.toLowerCase()
+    for (i in 0..line.length - 1) {
+        val ch = line[i]
+        if (ch == 'a' || ch == 'e' || ch == 'i'
+            || ch == 'o' || ch == 'u')
+        {
+            ++vowel
+        }
+    }
+    println("Vowels: $vowel")
+}
+____________________________________________________________
+
+Q17 Employee Code, Employee Name, Employee
+Department and Employee Basic Salary. Calculate the Gross Salary of the employee using
+the following criterias. 
+
+Allowance = HRA(5% of Basic Salary) + DA(12% of Basic Salary) + TA(fixed as
+given below)
+TA calculation
+300 - HR Dept
+500 - IT Dept
+800 - Sales/Marketing Dept
+Tax as
+Gross Salary <= 25,000 No Tax
+Gross Salary between (26,000 & 75000) 15% Tax
+Gross Salary > 75,000 25% Tax
+Gross Salary = (Basic Salary + Allowance)
+Net Salary = Gross salary - Tax
+Note: Create UDF to calculate the Allowances & Net Salary
+
+fun main() {
+    print("Enter Employee Code: ")
+    val empCode = readln()
+    print("Enter Employee Name: ")
+    val empName = readln()
+    print("Enter Employee Department (HR/IT/Sales/Marketing): ")
+    val empDept = readln()
+    print("Enter Employee Basic Salary: ")
+    val basicSalary = readln().toDouble()
+    val hra = 0.05 * basicSalary
+    val da = 0.12 * basicSalary
+    val ta = when (empDept) {
+        "HR" -> 300.0
+        "IT" -> 500.0
+        "Sales", "Marketing" -> 800.0
+        else -> 0.0
+    }
+    val totalAllowances = hra + da + ta
+    val grossSalary = basicSalary + totalAllowances
+    val tax = when {
+        grossSalary <= 25000 -> 0.0
+        grossSalary <= 75000 -> grossSalary * 0.15
+        else -> grossSalary * 0.25
+    }
+    val netSalary = grossSalary - tax
+    println("\nEmployee Details:")
+    println("Employee Code: $empCode")
+    println("Employee Name: $empName")
+    println("Employee Department: $empDept")
+    println("Basic Salary: $basicSalary")
+    println("Total Allowances: $totalAllowances")
+    println("Gross Salary: $grossSalary")
+    println("Tax: $tax")
+    println("Net Salary: $netSalary")
+}
+____________________________________________________________
+
+Q18 input 5 numbers from the user and find their sum and average.
+
+fun main(){
+    println("Enter a number1")
+    var a:Int=Integer.valueOf(readLine())
+    println("Enter a number2")
+    var b:Int=Integer.valueOf(readLine())
+    println("Enter a number3")
+    var c:Int=Integer.valueOf(readLine())
+    println("Enter a number4")
+    var d:Int=Integer.valueOf(readLine())
+    println("Enter a number5")
+    var e:Int=Integer.valueOf(readLine())
+    var total=a+b+c+d+e
+    println("Total is $total")
+    var avg=total/5
+    println("Average is $avg")
+}
+____________________________________________________________
+
+Q19 print the following pattern:
+
+fun main() {
+ for (i in 1..10) {
+ for (j in 1..i) {
+ print(j)
+ }
+ println()
+ }
+}
+____________________________________________________________
+
+Q20 provide a list of options to the user for findingSquare, Cube and factorial of a number. 
+Using when perform the appropriate operation as selected by the user
+
+fun main() {
+    println("Select an option:")
+    println("1. Find the square of a number")
+    println("2. Find the cube of a number")
+    println("3. Find the factorial of a number")
+    println("4. Exit")
+    print("Enter your choice (1-4): ")
+    val choice = readln().toInt()
+    when (choice) {
+        1 -> {
+        print("Enter a number to find its square: ")
+        val num = readln().toInt()
+        val square = num * num
+        println("The square of $num is $square")
+    }
+        2 -> {
+            print("Enter a number to find its cube: ")
+            val num = readln().toInt()
+            val cube = num * num * num
+            println("The cube of $num is $cube")
+        }
+        3 -> {
+            print("Enter a number to find its factorial: ")
+            val num = readln().toInt()
+            var factorial = 1
+            for (i in 1..num) {
+                factorial *= i
+            }
+            println("The factorial of $num is $factorial")
+        }
+        4 -> {
+            println("Exiting the program. Goodbye!")
+        }
+        else -> {
+            println("Invalid choice! Please select a valid option (1-4).")
+        }
+    }
+}
+____________________________________________________________
+
+Q21finding the area of Circle, Square, Triangle and Cylinder. Perform
+appropriate operation as selected by the user.
+
+fun main() {
+    println("Select an option:")
+    println("1. Find the area of a Circle")
+    println("2. Find the area of a Square")
+    println("3. Find the area of a Triangle")
+    println("4. Find the area of a Cylinder")
+    println("5. Exit")
+    print("Enter your choice (1-5): ")
+    val choice = readln().toInt()
+    val PI=3.14
+    when (choice) {
+        1 -> {
+            print("Enter the radius of the Circle: ")
+            val radius = readln().toDouble()
+            val area = PI * radius * radius
+            println("The area of the Circle is: $area")
+        }
+        2 -> {
+            print("Enter the side length of the Square: ")
+            val side = readln().toDouble()
+            val area = side * side
+            println("The area of the Square is: $area")
+        }
+        3 -> {
+            print("Enter the base of the Triangle: ")
+            val base = readln().toDouble()
+            print("Enter the height of the Triangle: ")
+            val height = readln().toDouble()
+            val area = 0.5 * base * height
+            println("The area of the Triangle is: $area")
+        }
+        4 -> {
+            print("Enter the radius of the Cylinder: ")
+            val radius = readln().toDouble()
+            print("Enter the height of the Cylinder: ")
+            val height = readln().toDouble()
+            val area = 2 * PI * radius * (radius + height)
+            println("The surface area of the Cylinder is: $area")
+        }
+        5 -> {
+            println("Exiting the program. Goodbye!")
+        }
+        else -> {
+            println("Invalid choice! Please select a valid option (1-5).")
+        }
+    }
+}
+
+____________________________________________________________
+
+Q22  print the following pattern:
+
+fun main() {
+ for (i in 8 downTo 1) {
+ for (j in 1..i) {
+ print("*")
+ }
+ println()
+ }
+}
+
+____________________________________________________________
+
+Q23 check whether the number is positive, negative or zero using lambda.
+
+fun main() {
+ val checkNumber: (Int) -> String = { number ->
+ when {
+ number > 0 -> "Positive"
+ number < 0 -> "Negative"
+ else -> "Zero"
+ }
+ }
+ print("Enter a number: ")
+ val num = readln().toInt()
+ println("The number is: ${checkNumber(num)}")
+}
+____________________________________________________________
+
+Q24  N values from the user, and
+perform the addition of positive numbers only. Note: Use a do-while loop
+and using UDF.
+
+fun main() {
+ print("Enter the number of values you want to input: ")
+ val n = readln().toInt()
+ val sum = addPositiveNumbers(n)
+ println("The sum of positive numbers is: $sum")
+}
+fun addPositiveNumbers(n: Int): Int {
+ var sum = 0
+ var count = 0
+ do {
+ print("Enter number ${count + 1}: ")
+ val num = readln().toInt()
+ if (num > 0) {
+ sum += num
+ }
+ count++
+ } while (count < n)
+ return sum 
+}
+____________________________________________________________
+
+Q25 array of 5 string values and print them using forEach loop.
+Also create UDF for the same.
+
+fun main() {
+    val names = arrayOf("Parth", "Mahipal", "Paras", "Meet", "Suju")
+    printArrayValues(names)
+}
+fun printArrayValues(arr: Array<String>) {
+    arr.forEach { value ->
+        println(value)
+    }
+}
+____________________________________________________________
+
+Q26 fibonacci series having “N” elements.
+ Accept the value of N from the user. 
+Note:Use loop in reverse order & create UDF
+
+fun main() {
+ print("Enter the number of Fibonacci elements (N): ")
+ val n = readln().toInt()
+ printFibonacciReverse(n)
+}
+fun printFibonacciReverse(n: Int) {
+ val fibonacci = mutableListOf<Int>()
+ var first = 0
+ var second = 1
+ for (i in 1..n) {
+ fibonacci.add(first)
+ val next = first + second
+ first = second
+ second = next
+ }
+ for (i in fibonacci.size - 1 downTo 0) {
+ print("${fibonacci[i]} ")
+ }
+}
+____________________________________________________________
+
+Q27 convert Kilometre to Metres or vice versa.
+Accept the choice from the user and perform the conversion accordingly.
+Note: Try to use lambda function for conversion 
+
+fun main() {
+    val kmToMetres: (Double) -> Double = { km -> km * 1000 }
+    val metresToKm: (Double) -> Double = { metres -> metres / 1000 }
+    println("Select the conversion option:")
+    println("1. Convert Kilometres to Metres")
+    println("2. Convert Metres to Kilometres")
+    print("Enter your choice (1 or 2): ")
+    val choice = readln().toInt()
+    when (choice) {
+        1 -> {
+            print("Enter the distance in Kilometres: ")
+            val km = readln().toDouble()
+            val metres = kmToMetres(km)
+            println("$km Kilometres is equal to $metres Metres.")
+        }
+        2 -> {
+            print("Enter the distance in Metres: ")
+            val metres = readln().toDouble()
+            val km = metresToKm(metres)
+            println("$metres Metres is equal to $km Kilometres.")
+        }
+        else -> { println("Invalid choice. Please enter 1 or 2.") } } }
+____________________________________________________________
+
+Q28 print all prime numbers in between a given range, using UDF.
+
+fun main() {
+ print("Enter the lower range: ")
+ val lower = readln().toInt()
+ print("Enter the upper range: ")
+ val upper = readln().toInt()
+ printPrimeNumbers(lower, upper)
+}
+fun printPrimeNumbers(lower: Int, upper: Int) {
+ for (num in lower..upper) {
+ if (isPrime(num)) {
+ println(num)
+ }
+ }
+}
+fun isPrime(num: Int): Boolean {
+ if (num <= 1) return false
+ for (i in 2 until num) {
+ if (num % i == 0) return false
+ }
+ return true
+}
+____________________________________________________________
+
+Q29 accept a number from the user and check whether it is an Armstrong number or not.
+ Note: Use do-while loop & create UDF
+
+fun main() {
+ print("Enter a number: ")
+ val number = readln().toInt()
+ if (isArmstrongNumber(number)) {
+ println("$number is an Armstrong number.")
+ } else {
+ println("$number is not an Armstrong number.")
+ }
+}
+fun isArmstrongNumber(num: Int): Boolean {
+ var sum = 0
+ val originalNumber = num
+ val numberOfDigits = num.toString().length
+ var temp = num
+ do {
+ val digit = temp % 10
+ sum += Math.pow(digit.toDouble(), numberOfDigits.toDouble()).toInt()
+ temp /= 10
+ } while (temp > 0)
+ return sum == originalNumber
+}
+____________________________________________________________
+
+Q30 demonstrate the use of indices attributes and withIndex() function of an Array
+
+fun main() {
+    val numbers = arrayOf(10, 20, 30, 40, 50)
+    println("Using 'indices' to loop over the array:")
+    for (index in numbers.indices) {
+        println("Index: $index, Value: ${numbers[index]}")
+    }
+    println("\nUsing 'withIndex()' to loop over the array:")
+    for ((index, value) in numbers.withIndex()) {
+        println("Index: $index, Value: $value")
+    }
+}
+____________________________________________________________
+
+Q31 between 0-6 or any 1 value from the following.(day-name)
+
+fun main() {
+    println("Enter a number between 0-6 or a day name (Sun, Mon, Tue, Wed, Thurs, Fri, Sat):")
+    val input = readln()
+    printDay(input)
+}
+fun printDay(input: String) {
+    if (input.toIntOrNull() in 0..6) {
+        when (input.toInt()) {
+            0 -> println("Sunday")
+            1 -> println("Monday")
+            2 -> println("Tuesday")
+            3 -> println("Wednesday")
+            4 -> println("Thursday")
+            5 -> println("Friday")
+            6 -> println("Saturday")
+        }
+    }
+    else {
+        when (input.lowercase()) {
+            "sun" -> println("Sunday")
+            "mon" -> println("Monday")
+            "tue" -> println("Tuesday")
+            "wed" -> println("Wednesday")
+            "thurs" -> println("Thursday")
+            "fri" -> println("Friday")
+            "sat" -> println("Saturday")
+            else -> println("Invalid input")
+        } } }
+____________________________________________________________
+
+
+
+
