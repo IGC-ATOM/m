@@ -442,4 +442,16 @@ fun printDay(input: String) {
         } } } 
 ____________________________________________________________
 
+Q32 Palindrom
 
+fun main() {
+    print("Enter a word: ")
+    val input = readln()
+    val string = input.lowercase()
+    
+    if (input == input.reversed()) {
+        println("It's a palindrome!")
+    } else {
+        println("It's not a palindrome.")
+    }
+}
